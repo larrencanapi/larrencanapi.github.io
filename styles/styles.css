@@ -1,0 +1,85 @@
+:root {
+    background-color: #0A1929;
+    color: #e0e0e0;
+    box-sizing: border-box;
+    font-family: Helvetica, Arial, sans-serif;
+}
+/* Header and Navbar */
+header {
+    position: sticky;
+    top: 0;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-title {
+    font-size: 1.5rem;
+    margin: 0.5rem;
+}
+
+.navbar-sections ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-sections li {
+    list-style: none;
+}
+
+.navbar-sections li a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 1rem;
+    display: block;
+}
+
+/* Welcome Message */
+
+.welcome-message {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    padding: 2rem;
+}
+
+.welcome-message-headers {
+    font-size: 2rem;
+}
+
+/* About Section */
+.about-section {
+    display: grid;
+    grid-template-columns: 1fr 1.75fr 1fr;
+    grid-template-areas: ". about-section-text .";
+    padding: 2rem;
+}
+
+.about-section-text {
+    grid-area: about-section-text;
+}
+
+/* About Section */
+.skills-section {
+    display: grid;
+    grid-template-columns: 1fr 1.75fr 1fr;
+    grid-template-areas: ". skills-section-text .";
+    padding: 2rem;
+}
+
+.skills-section-text {
+    grid-area: skills-section-text;
+}
+
+/* Footer  */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
