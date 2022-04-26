@@ -1,15 +1,18 @@
-:root {
+
+body {
     background-color: #0A1929;
     color: #e0e0e0;
     box-sizing: border-box;
     font-family: Helvetica, Arial, sans-serif;
+    margin: 0;
 }
+
 /* Header and Navbar */
 header {
     position: sticky;
     top: 0;
+    background-color: #07131D;
 }
-
 
 .navbar {
     display: flex;
@@ -20,6 +23,8 @@ header {
 .navbar-title {
     font-size: 1.5rem;
     margin: 0.5rem;
+    padding-left: 1rem;
+    font-weight: bold;
 }
 
 .navbar-sections ul {
@@ -37,6 +42,31 @@ header {
     color: #ffffff;
     padding: 1rem;
     display: block;
+}
+
+.menu-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.menu-button .bar {
+    
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
 }
 
 /* Welcome Message */
@@ -64,7 +94,7 @@ header {
     grid-area: about-section-text;
 }
 
-/* About Section */
+/* Skills Section */
 .skills-section {
     display: grid;
     grid-template-columns: 1fr 1.75fr 1fr;
@@ -76,10 +106,70 @@ header {
     grid-area: skills-section-text;
 }
 
+/* Experience Section */
+.experience-section {
+    display: grid;
+    grid-template-columns: 1fr 1.75fr 1fr;
+    grid-template-areas: ". experience-section-text .";
+    padding: 2rem;
+}
+
+.experience-section-text {
+    grid-area: experience-section-text;
+}
+
+/* Projects Section */
+.projects-section {
+    display: grid;
+    grid-template-columns: 1fr 1.75fr 1fr;
+    grid-template-areas: ". projects-section-text .";
+    padding: 2rem;
+}
+
+.projects-section-text {
+    grid-area: projects-section-text;
+}
+
 /* Footer  */
 footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
+    position:absolute;
+    left:0;
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: #07131D;
+
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+    .menu-button {
+        display: flex;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-sections {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-sections ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-sections li {
+        text-align: center;
+    }
+
+    .navbar-sections.active {
+        display: flex;
+    }
 }
