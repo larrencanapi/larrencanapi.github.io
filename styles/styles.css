@@ -11,7 +11,7 @@ body {
 header {
     position: sticky;
     top: 0;
-    background-color: #07131D;
+    background-color: #102442;
 }
 
 .navbar {
@@ -44,6 +44,10 @@ header {
     display: block;
 }
 
+.navbar-sections li a:hover {
+    color: #C9C9C9;
+}
+
 .menu-button-container {
     display: flex;
     justify-content: center;
@@ -72,20 +76,20 @@ header {
 /* Welcome Message */
 
 .welcome-message {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 2rem;
 }
 
 .welcome-message-headers {
-    font-size: 2rem;
+    font-size: 1.75rem;
 }
 
 /* About Section */
 .about-section {
     display: grid;
-    grid-template-columns: 1fr 1.75fr 1fr;
+    grid-template-columns: 1fr 3fr 1fr;
     grid-template-areas: ". about-section-text .";
     padding: 2rem;
 }
@@ -94,10 +98,11 @@ header {
     grid-area: about-section-text;
 }
 
+
 /* Skills Section */
 .skills-section {
     display: grid;
-    grid-template-columns: 1fr 1.75fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
     grid-template-areas: ". skills-section-text .";
     padding: 2rem;
 }
@@ -109,7 +114,7 @@ header {
 /* Experience Section */
 .experience-section {
     display: grid;
-    grid-template-columns: 1fr 1.75fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
     grid-template-areas: ". experience-section-text .";
     padding: 2rem;
 }
@@ -118,10 +123,19 @@ header {
     grid-area: experience-section-text;
 }
 
+.job-experience {
+    margin-bottom: 2rem;
+}
+
+.job-info {
+    display: flex;
+    justify-content: space-between;
+}
+
 /* Projects Section */
 .projects-section {
     display: grid;
-    grid-template-columns: 1fr 1.75fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
     grid-template-areas: ". projects-section-text .";
     padding: 2rem;
 }
@@ -145,7 +159,7 @@ footer {
 }
 
 /* Media Queries */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .menu-button {
         display: flex;
     }
