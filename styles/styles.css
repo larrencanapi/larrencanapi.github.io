@@ -1,4 +1,4 @@
-
+/* General Body Styling */
 body {
     background-color: #0A1929;
     color: #e0e0e0;
@@ -77,25 +77,51 @@ header {
 
 .welcome-message {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
+    flex-direction: column;
+    padding: 2rem; 
+    text-indent: 15%;
+    margin-top: 4rem;
+    margin-bottom: 6rem;
+    max-width: 1440px;
 }
 
 .welcome-message-headers {
-    font-size: 1.75rem;
+    font-size: clamp(1.25rem, 5vw, 3rem);
+}
+
+.welcome-message-headers h2 {
+    margin-bottom: 1rem;
 }
 
 /* About Section */
 .about-section {
+    /*
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-areas: ". about-section-text .";
     padding: 2rem;
+    */
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+
+    /*
+    width: clamp(45ch, 50%, 75ch);
+    margin: 0 auto;
+    */
 }
 
-.about-section-text {
-    grid-area: about-section-text;
+.about-section h3 {
+    align-items: flex-start;
+    font-size: clamp(1.5rem, 3vw, 1.75rem);
+}
+
+.about-section p {
+    font-size: clamp(1.25rem, 1.25vw, 1.5rem);
+    max-width: 45ch;
 }
 
 
@@ -113,14 +139,20 @@ header {
 
 /* Experience Section */
 .experience-section {
+    
     display: grid;
+    place-items: center;
+    /*
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-areas: ". experience-section-text .";
     padding: 2rem;
+    */
 }
 
 .experience-section-text {
+    /*
     grid-area: experience-section-text;
+    */
 }
 
 .job-experience {
@@ -128,15 +160,17 @@ header {
 }
 
 .job-info {
+    /*
     display: flex;
     justify-content: space-between;
+    */
 }
 
 /* Projects Section */
 .projects-section {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-areas: ". projects-section-text .";
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "projects-section-text .";
     padding: 2rem;
 }
 
@@ -149,7 +183,10 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+
     position:absolute;
+    bottom: 0;
     left:0;
     width: 100%;
     padding-top: 1rem;
@@ -160,6 +197,7 @@ footer {
 
 /* Media Queries */
 @media (max-width: 768px) {
+    /* Navbar */
     .menu-button {
         display: flex;
     }
@@ -186,4 +224,19 @@ footer {
     .navbar-sections.active {
         display: flex;
     }
+
+    /* Welcome Message */
+    .welcome-message {
+        display: flex;
+        flex-direction: column;
+        place-items: center;
+        text-indent: 0%;
+    }
+    
+
+}
+
+/* Media Queries */
+@media (max-width: 576px) {
+
 }
