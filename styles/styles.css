@@ -78,11 +78,10 @@ header {
 .welcome-message {
     display: flex;
     flex-direction: column;
-    padding: 2rem; 
     text-indent: 15%;
-    margin-top: 4rem;
-    margin-bottom: 6rem;
+    margin-top: 6rem;
     max-width: 1440px;
+    height: 80vh;
 }
 
 .welcome-message-headers {
@@ -131,6 +130,8 @@ header {
     justify-content: center;
     align-items: center;
     padding: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .skills-section h3 {
@@ -166,6 +167,8 @@ header {
     flex-direction: column;
     padding: 2rem;
     max-width: 1440px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .experience-section h3 {
@@ -200,17 +203,33 @@ header {
 
 /* Projects Section */
 .projects-section {
+    /*
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: "projects-section-text .";
     padding: 2rem;
+    */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
-.projects-section-text {
-    grid-area: projects-section-text;
+.projects-section h3 {
+    align-items: flex-start;
+    font-size: clamp(1.5rem, 3vw, 1.75rem);
 }
 
-/* Footer  */
+.projects-section p {
+    font-size: clamp(1.25rem, 1.25vw, 1.5rem);
+    max-width: 60ch;
+    margin-bottom: 4rem;
+}
+
+/* Footer */
 footer {
     display: flex;
     justify-content: center;
@@ -218,11 +237,10 @@ footer {
     flex-direction: column;
 
     position:absolute;
-    bottom: 0;
-    left:0;
     width: 100%;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    margin-top: 6rem;
     background-color: #07131D;
 
 }
@@ -263,6 +281,7 @@ footer {
         flex-direction: column;
         place-items: center;
         text-indent: 0%;
+        height: 60vh;
     }
     
     /* Skills Section */
