@@ -27,6 +27,11 @@ header {
     font-weight: bold;
 }
 
+.navbar-title a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
 .navbar-sections ul {
     margin: 0;
     padding: 0;
@@ -238,11 +243,29 @@ footer {
 
     position:absolute;
     width: 100%;
-    padding-top: 1rem;
+    padding-top: 2rem;
     padding-bottom: 1rem;
     margin-top: 6rem;
     background-color: #07131D;
+}
 
+footer p {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    text-align: center;
+}
+
+.social-links a {
+    text-decoration: none; 
+    color: inherit; 
+    padding: 0.25rem;
+}
+
+.social-links a:hover {
+    color: #C9C9C9;
+}
+
+.social-links i {
+    font-size: clamp(2rem, 2.5rem, 3rem);
 }
 
 /* Media Queries */
