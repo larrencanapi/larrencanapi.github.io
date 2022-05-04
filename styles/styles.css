@@ -115,7 +115,6 @@ header {
 }
 
 .about-section h3 {
-    align-items: flex-start;
     font-size: clamp(1.5rem, 3vw, 1.75rem);
 }
 
@@ -161,37 +160,48 @@ header {
 
 /* Experience Section */
 .experience-section {
-    
-    display: grid;
-    place-items: center;
-    /*
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-areas: ". experience-section-text .";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     padding: 2rem;
-    */
+    max-width: 1440px;
 }
 
-.experience-section-text {
-    /*
-    grid-area: experience-section-text;
-    */
+.experience-section h3 {
+    font-size: clamp(1.75rem, 3vw, 2rem);
 }
 
 .job-experience {
-    margin-bottom: 2rem;
+    /*
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: max(1rem, 10%);
+    */
+    display: flex;
+    width: 75%;
+    gap: 2rem;
+    justify-content: space-between;
 }
 
 .job-info {
-    /*
-    display: flex;
-    justify-content: space-between;
-    */
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    justify-self: start;
+}
+
+.job-date {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    justify-self: end;
+}
+
+.job-position {
+    font-style: italic;
 }
 
 /* Projects Section */
 .projects-section {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-areas: "projects-section-text .";
     padding: 2rem;
 }
@@ -266,6 +276,11 @@ footer {
         row-gap: 2rem;
     }
 
+    /* Experience Section */
+    .job-experience {
+        width: 100%;
+    }
+
 }
 
 /* Media Queries */
@@ -283,5 +298,25 @@ footer {
         width: 100%;
         grid-template-columns: repeat(3, minmax(4rem, 1fr));
         row-gap: 2rem;
+    }
+
+    /* Experience Section */
+    .experience-section {
+        padding: 1rem;
+    }
+
+    .job-experience {
+        width: 100%;
+    }
+
+    .job-info {
+        font-size: clamp(1rem, 2vw, 1rem);
+        justify-self: start;
+    }
+    
+    .job-date {
+        font-size: 1rem;
+        justify-self: end;
+        text-align: right;
     }
 }
