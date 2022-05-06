@@ -2,7 +2,8 @@ const menuButton = document.getElementsByClassName('menu-button')[0];
 const navbarLinks = document.getElementsByClassName('navbar-sections')[0];
 
 // activates mobile menu list open
-menuButton.addEventListener('click', () => {
+menuButton.addEventListener('click', (event) => {
+    event.preventDefault();
     navbarLinks.classList.toggle('active');
 })
 
