@@ -208,12 +208,6 @@ header {
 
 /* Projects Section */
 .projects-section {
-    /*
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas: "projects-section-text .";
-    padding: 2rem;
-    */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -224,15 +218,75 @@ header {
 }
 
 .projects-section h3 {
-    align-items: flex-start;
-    font-size: clamp(1.5rem, 3vw, 1.75rem);
+    font-size: clamp(1.75rem, 3vw, 2rem);
 }
 
-.projects-section p {
-    font-size: clamp(1.25rem, 1.25vw, 1.5rem);
-    max-width: 60ch;
-    margin-bottom: 4rem;
+.project-collection {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
+    gap: 1rem;
+    max-width: 1440px;
+    width: 80%;
+    place-items: center;
 }
+
+.project-card {
+    width: clamp(30ch, 80%, 60ch);
+    max-width: 350px;
+    height: 400px;
+    /*
+    border: 2px solid;
+    border-color: aquamarine;
+    */
+    box-shadow: 0 2px 5px 0 #C9C9C9;
+}
+
+.card-image {
+    overflow: hidden;
+}
+
+.card-image > img {
+    display: block;
+    width: 100%;
+    max-height: 180px;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+    object-position: top;
+}
+
+.card-body {
+    padding: 1rem;
+    padding-bottom: 0;
+}
+
+.card-body h4 {
+    font-size: clamp(1.25rem, 1.5vw, 1.5rem);
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.card-body p {
+    font-size: clamp(1.15rem, 1.25vw, 1.3rem);
+}
+
+.card-footer {
+    padding: 1rem;
+    padding-top: 0;
+}
+
+.card-footer i {
+    font-size: 2rem;
+}
+
+.card-footer a {
+    text-decoration: none; 
+    color: #e0e0e0; 
+}
+
+.card-footer a:hover {
+    color: #C9C9C9;
+}
+
 
 /* Footer */
 footer {
@@ -250,7 +304,7 @@ footer {
 }
 
 footer p {
-    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-size: clamp(1.25rem, 1.25vw, 1.5rem);
     text-align: center;
 }
 
@@ -360,5 +414,10 @@ footer p {
         font-size: 1rem;
         justify-self: end;
         text-align: right;
+    }
+
+    /* Projects Section */
+    .project-collection {
+        width: 100%;
     }
 }
