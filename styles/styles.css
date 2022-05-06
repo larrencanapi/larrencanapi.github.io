@@ -360,6 +360,10 @@ footer p {
         text-indent: 0%;
         height: 60vh;
     }
+
+    .about-section p {
+        text-align: center;
+    }
     
     /* Skills Section */
     .skills-section i {
