@@ -1,7 +1,13 @@
 /* General Body Styling */
+:root {
+    --white-color: #e0e0e0;
+    --hover-color: #C9C9C9;
+    --section-header: clamp(1.5rem, 3vw, 1.75rem);;
+}
+
 body {
     background-color: #0A1929;
-    color: #e0e0e0;
+    color: var(--white-color);
     box-sizing: border-box;
     font-family: Helvetica, Arial, sans-serif;
     margin: 0;
@@ -50,7 +56,7 @@ header {
 }
 
 .navbar-sections li a:hover {
-    color: #C9C9C9;
+    color: var(--hover-color);
 }
 
 .menu-button-container {
@@ -79,7 +85,6 @@ header {
 }
 
 /* Welcome Message */
-
 .welcome-message {
     display: flex;
     flex-direction: column;
@@ -99,27 +104,15 @@ header {
 
 /* About Section */
 .about-section {
-    /*
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-areas: ". about-section-text .";
-    padding: 2rem;
-    */
-    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 2rem;
-
-    /*
-    width: clamp(45ch, 50%, 75ch);
-    margin: 0 auto;
-    */
 }
 
 .about-section h3 {
-    font-size: clamp(1.5rem, 3vw, 1.75rem);
+    font-size: var(--section-header);
 }
 
 .about-section p {
@@ -141,7 +134,7 @@ header {
 
 .skills-section h3 {
     align-items: flex-start;
-    font-size: clamp(1.5rem, 3vw, 1.75rem);
+    font-size: var(--section-header);
 }
 
 .skills-section p {
@@ -177,15 +170,10 @@ header {
 }
 
 .experience-section h3 {
-    font-size: clamp(1.75rem, 3vw, 2rem);
+    font-size: var(--section-header);
 }
 
 .job-experience {
-    /*
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    column-gap: max(1rem, 10%);
-    */
     display: flex;
     width: 75%;
     gap: 2rem;
@@ -218,7 +206,7 @@ header {
 }
 
 .projects-section h3 {
-    font-size: clamp(1.75rem, 3vw, 2rem);
+    font-size: var(--section-header);
 }
 
 .project-collection {
@@ -230,15 +218,12 @@ header {
     place-items: center;
 }
 
+/* Project Cards */
 .project-card {
     width: clamp(30ch, 80%, 60ch);
     max-width: 350px;
     height: 400px;
-    /*
-    border: 2px solid;
-    border-color: aquamarine;
-    */
-    box-shadow: 0 2px 5px 0 #C9C9C9;
+    box-shadow: 0 2px 5px 0 var(--hover-color);
 }
 
 .card-image {
@@ -280,15 +265,15 @@ header {
 
 .card-footer a {
     text-decoration: none; 
-    color: #e0e0e0; 
+    color: var(--white-color); 
 }
 
 .card-footer a:hover {
-    color: #C9C9C9;
+    color: var(--hover-color);
 }
 
 
-/* Footer */
+/* Footer and Social Links */
 footer {
     display: flex;
     justify-content: center;
@@ -315,7 +300,7 @@ footer p {
 }
 
 .social-links a:hover {
-    color: #C9C9C9;
+    color: var(--hover-color);
 }
 
 .social-links i {
