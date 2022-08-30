@@ -88,18 +88,27 @@ header {
 .welcome-message {
     display: flex;
     flex-direction: column;
-    text-indent: 15%;
-    margin-top: 6rem;
-    max-width: 1440px;
-    height: 80vh;
+    place-items: center;
+    text-indent: 0%;
+    height: 60vh;
+    margin-top: 15vh;
+    margin-bottom: 15vh;
 }
 
 .welcome-message-headers {
     font-size: clamp(1.25rem, 5vw, 3rem);
 }
 
-.welcome-message-headers h2 {
-    margin-bottom: 1rem;
+#blinking-cursor {
+    border-right: .40rem solid #e0e0e0;
+    animation: 
+        cursor-animation 1.25s step-end infinite;
+}
+
+@keyframes cursor-animation {
+    from { border-color: #e0e0e0; }
+    50% { border-color: #0A1929; }
+    to { border-color: #e0e0e0; } 
 }
 
 /* About Section */
@@ -211,9 +220,8 @@ header {
 
 .project-collection {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
-    gap: 1rem;
-    max-width: 1440px;
+    grid-template-columns: repeat(2, minmax(30ch, 1fr));
+    gap: 2rem;
     width: 80%;
     place-items: center;
 }
@@ -233,7 +241,7 @@ header {
 .card-image > img {
     display: block;
     width: 100%;
-    max-height: 180px;
+    max-height: 200px;
     aspect-ratio: 16 / 9;
     object-fit: contain;
     object-position: top;
@@ -337,15 +345,6 @@ footer p {
         display: flex;
     }
 
-    /* Welcome Message */
-    .welcome-message {
-        display: flex;
-        flex-direction: column;
-        place-items: center;
-        text-indent: 0%;
-        height: 60vh;
-    }
-
     .about-section p {
         text-align: center;
     }
@@ -366,6 +365,11 @@ footer p {
         width: 100%;
     }
 
+    /* Projects Section */
+    .project-collection {
+            width: 100%;
+            grid-template-columns: minmax(30ch, 1fr);
+    }
 }
 
 /* Media Queries */
@@ -403,10 +407,5 @@ footer p {
         font-size: 1rem;
         justify-self: end;
         text-align: right;
-    }
-
-    /* Projects Section */
-    .project-collection {
-        width: 100%;
     }
 }
