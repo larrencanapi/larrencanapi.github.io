@@ -88,18 +88,27 @@ header {
 .welcome-message {
     display: flex;
     flex-direction: column;
-    text-indent: 15%;
-    margin-top: 6rem;
-    max-width: 1440px;
-    height: 80vh;
+    place-items: center;
+    text-indent: 0%;
+    height: 60vh;
+    margin-top: 15vh;
+    margin-bottom: 15vh;
 }
 
 .welcome-message-headers {
     font-size: clamp(1.25rem, 5vw, 3rem);
 }
 
-.welcome-message-headers h2 {
-    margin-bottom: 1rem;
+#blinking-cursor {
+    border-right: .40rem solid #e0e0e0;
+    animation: 
+        cursor-animation 1.25s step-end infinite;
+}
+
+@keyframes cursor-animation {
+    from { border-color: #e0e0e0; }
+    50% { border-color: #0A1929; }
+    to { border-color: #e0e0e0; } 
 }
 
 /* About Section */
@@ -334,15 +343,6 @@ footer p {
 
     .navbar-sections.active {
         display: flex;
-    }
-
-    /* Welcome Message */
-    .welcome-message {
-        display: flex;
-        flex-direction: column;
-        place-items: center;
-        text-indent: 0%;
-        height: 60vh;
     }
 
     .about-section p {
